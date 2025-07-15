@@ -2,6 +2,7 @@ package org.SenApp.gui;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Objects;
 
 public class LeccionesAppPanel extends JPanel {
     public LeccionesAppPanel(JFrame frame, CardLayout cards, JPanel container) {
@@ -9,8 +10,15 @@ public class LeccionesAppPanel extends JPanel {
         setBackground(Color.decode("#F0F4FA"));
 
         // LOGO
-        ImageIcon logo = new ImageIcon(getClass().getResource("/resources/logo.png"));
-        JLabel logoLabel = new JLabel(logo);
+        JLabel logoLabel = new JLabel();
+        java.net.URL logoUrl = LeccionesAppPanel.class.getResource("/recursosGraficos/logo.png");
+        if (logoUrl != null) {
+            logoLabel.setIcon(new ImageIcon(logoUrl));
+        } else {
+            logoLabel.setText("SenApp");
+            logoLabel.setFont(new Font("Segoe UI", Font.BOLD, 24));
+            logoLabel.setForeground(Color.decode("#223C77"));
+        }
         logoLabel.setHorizontalAlignment(SwingConstants.CENTER);
         logoLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         add(logoLabel, BorderLayout.NORTH);

@@ -19,7 +19,7 @@ public class ModuloAvanzadoPanel extends JPanel {
         setBackground(Color.decode("#F0F4FA"));
 
         // LOGO
-        ImageIcon logo = new ImageIcon(getClass().getResource("/resources/logo.png"));
+        ImageIcon logo = new ImageIcon(getClass().getResource("/recursosGraficos/logo.png"));
         JLabel logoLabel = new JLabel(logo);
         logoLabel.setHorizontalAlignment(SwingConstants.CENTER);
         logoLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -69,7 +69,7 @@ public class ModuloAvanzadoPanel extends JPanel {
     private void mostrarConversaciones() {
         Map<String, String> vids = new LinkedHashMap<>();
         vids.put("Conversación 1", "/recursosGraficos/Modulo Intermedio/Conversacion 1.mp4");
-        vids.put("Conversación 2", "/videos/avanzado/conversacion2.mp4");
+        vids.put("Conversación 2", "/recursosGraficos/Modulo Intermedio/Conversacion 1.mp4");
         VideoLessonPanel p = new VideoLessonPanel(frame, cards, container,
                 "Conversaciones Completas", vids, "avanzado");
         container.add(p, "avan_conv");
@@ -78,8 +78,8 @@ public class ModuloAvanzadoPanel extends JPanel {
 
     private void mostrarTrabajo() {
         Map<String, String> vids = new LinkedHashMap<>();
-        vids.put("Reunión", "/videos/avanzado/reunion.mp4");
-        vids.put("Entrevista", "/videos/avanzado/entrevista.mp4");
+        vids.put("Reunión", "/recursosGraficos/Modulo Intermedio/Grupo.mp4");
+        vids.put("Entrevista", "/recursosGraficos/Modulo Intermedio/Persona.mp4");
         VideoLessonPanel p = new VideoLessonPanel(frame, cards, container,
                 "Lengua de Señas en el Trabajo", vids, "avanzado");
         container.add(p, "avan_trabajo");
@@ -88,8 +88,8 @@ public class ModuloAvanzadoPanel extends JPanel {
 
     private void mostrarTecnicas() {
         Map<String, String> vids = new LinkedHashMap<>();
-        vids.put("Medicina", "/videos/avanzado/medicina.mp4");
-        vids.put("Tecnología", "/videos/avanzado/tecnologia.mp4");
+        vids.put("Medicina", "/recursosGraficos/Modulo Intermedio/Persona.mp4");
+        vids.put("Tecnología", "/recursosGraficos/Modulo Intermedio/Grupo.mp4");
         VideoLessonPanel p = new VideoLessonPanel(frame, cards, container,
                 "Señas Técnicas y Especializadas", vids, "avanzado");
         container.add(p, "avan_tecnicas");

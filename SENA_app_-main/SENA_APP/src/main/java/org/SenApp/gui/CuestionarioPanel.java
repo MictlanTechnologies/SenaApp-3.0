@@ -31,7 +31,7 @@ public class CuestionarioPanel extends JPanel {
         setBackground(Color.decode("#F0F4FA"));
 
         // LOGO
-        ImageIcon logo = new ImageIcon(getClass().getResource("/resources/logo.png"));
+        ImageIcon logo = new ImageIcon(getClass().getResource("/recursosGraficos/logo.png"));
         JLabel logoLabel = new JLabel(logo);
         logoLabel.setHorizontalAlignment(SwingConstants.CENTER);
         logoLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));

@@ -17,7 +17,7 @@ public class JuegoTextoPanel extends JPanel {
         setBackground(Color.decode("#F0F4FA"));
 
         // LOGO
-        ImageIcon logo = new ImageIcon(getClass().getResource("/resources/logo.png"));
+        ImageIcon logo = new ImageIcon(getClass().getResource("/recursosGraficos/logo.png"));
         JLabel logoLabel = new JLabel(logo);
         logoLabel.setHorizontalAlignment(SwingConstants.CENTER);
         logoLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -61,7 +61,7 @@ public class JuegoTextoPanel extends JPanel {
         UIManager.put("OptionPane.messageFont", new Font("Segoe UI", Font.PLAIN, 14));
         UIManager.put("OptionPane.buttonFont", new Font("Segoe UI", Font.BOLD, 13));
 
-        ImageIcon icono = new ImageIcon(getClass().getResource("/resources/logo.png"));
+        ImageIcon logo = new ImageIcon(getClass().getResource("/recursosGraficos/logo.png"));
 
         String[][] preguntas = {
                 {"¿Cuál es la seña correcta para 'Hola'?", "saludar"},
@@ -76,7 +76,7 @@ public class JuegoTextoPanel extends JPanel {
                     p[0] + "\nIngresa una palabra clave asociada:",
                     "Pregunta",
                     JOptionPane.QUESTION_MESSAGE,
-                    icono,
+                    logo,
                     null,
                     null
             ).toString();
@@ -91,7 +91,7 @@ public class JuegoTextoPanel extends JPanel {
                 "Puntuación: " + puntuacion + "/" + preguntas.length,
                 "Resultado",
                 JOptionPane.INFORMATION_MESSAGE,
-                icono
+                logo
         );
     }
 }

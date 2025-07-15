@@ -33,7 +33,7 @@ public class CuestionarioSwing {
         UIManager.put("OptionPane.buttonFont", new Font("Segoe UI", Font.BOLD, 13));
 
         // Si tienes un icono de logo puedes cargarlo aquí como ícono del JOptionPane
-        ImageIcon logo = new ImageIcon(getClass().getResource("/resources/logo.png"));
+        ImageIcon logo = new ImageIcon(getClass().getResource("/recursosGraficos/logo.png"));
 
         int puntuacion = 0;
         for (int i = 0; i < PREGUNTAS.length; i++) {

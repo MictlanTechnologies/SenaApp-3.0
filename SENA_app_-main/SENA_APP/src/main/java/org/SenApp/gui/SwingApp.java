@@ -1,6 +1,6 @@
 package org.SenApp.gui;
 
-import org.SenApp.Util.HibernateUtil;
+import com.vdurmont.emoji.EmojiParser;
 import org.SenApp.model.GestorUsuarios;
 import org.SenApp.model.Usuario;
 
@@ -17,7 +17,7 @@ public class SwingApp {
 
     public SwingApp() {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(500, 450);
+        frame.setSize(800, 650);
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
 
@@ -58,8 +58,8 @@ public class SwingApp {
         JTextField emailField = new JTextField();
         JPasswordField passField = new JPasswordField();
 
-        JButton loginBtn = new JButton("🔓 Iniciar sesión");
-        JButton registerBtn = new JButton("📝 Registrar");
+        JButton loginBtn = new JButton(EmojiParser.parseToUnicode("🔓 Iniciar sesión"));
+        JButton registerBtn = new JButton(EmojiParser.parseToUnicode("📝 Registrar"));
 
         JLabel correoLabel = new JLabel("Correo electrónico:");
         JLabel passLabel = new JLabel("Contraseña:");
@@ -118,7 +118,7 @@ public class SwingApp {
         JPanel panel = new JPanel(new BorderLayout());
         panel.setBackground(Color.decode("#F0F4FA"));
 
-        JLabel welcome = new JLabel("👋 Bienvenido, " + usuario.getNombre(), SwingConstants.CENTER);
+        JLabel welcome = new JLabel(EmojiParser.parseToUnicode("👋 Bienvenido, " + usuario.getNombre()), SwingConstants.CENTER);
         welcome.setFont(new Font("Segoe UI", Font.BOLD, 20));
         welcome.setForeground(Color.decode("#223C77"));
         welcome.setBorder(BorderFactory.createEmptyBorder(20, 0, 20, 0));
@@ -128,8 +128,8 @@ public class SwingApp {
         centerPanel.setLayout(new BoxLayout(centerPanel, BoxLayout.Y_AXIS));
         centerPanel.setBackground(Color.decode("#F0F4FA"));
 
-        JButton lecciones = new JButton("📚 Lecciones y Extras");
-        JButton salir = new JButton("🚪 Salir");
+        JButton lecciones = new JButton(EmojiParser.parseToUnicode("📚 Lecciones y Extras"));
+        JButton salir = new JButton(EmojiParser.parseToUnicode("🚪 Salir"));
 
         for (JButton btn : new JButton[]{lecciones, salir}) {
             btn.setAlignmentX(Component.CENTER_ALIGNMENT);

@@ -19,7 +19,7 @@ public class ModuloBasicoPanel extends JPanel {
         setBackground(Color.decode("#F0F4FA"));
 
         // LOGO
-        ImageIcon logo = new ImageIcon(getClass().getResource("/resources/logo.png"));
+        ImageIcon logo = new ImageIcon(getClass().getResource("/recursosGraficos/logo.png"));
         JLabel logoLabel = new JLabel(logo);
         logoLabel.setHorizontalAlignment(SwingConstants.CENTER);
         logoLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -58,8 +58,7 @@ public class ModuloBasicoPanel extends JPanel {
         }
 
         // Acciones
-        l1.addActionListener(e -> JOptionPane.showMessageDialog(frame,
-                "Introducción: La lengua de señas es esencial para la comunicación con personas sordas. Tiene historia, reglas y cultura propia."));
+        l1.addActionListener(e -> VideoPlayer.play("/recursosGraficos/Modulo Basico/Hola.mp4"));
 
         l2.addActionListener(e -> mostrarAlfabeto());
         l3.addActionListener(e -> mostrarSaludos());
@@ -72,7 +71,7 @@ public class ModuloBasicoPanel extends JPanel {
         Map<String, String> vids = new LinkedHashMap<>();
         String letras = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
         for (char c : letras.toCharArray()) {
-            vids.put(String.valueOf(c), "/recursosGraficos/Modulo Basico/Abecedario/" + c + ".mp4");
+            vids.put(String.valueOf(c), "/recursosGraficos/Modulo Basico/Abecedario/" + Character.toLowerCase(c) + ".mp4");
         }
         VideoLessonPanel p = new VideoLessonPanel(frame, cards, container,
                 "Alfabeto Manual", vids, "basico");
